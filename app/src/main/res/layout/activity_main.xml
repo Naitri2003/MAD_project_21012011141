@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/todo1"
+    >
+    <TextView
+           android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="times new roman"
+            android:text="YOUR TODO LIST"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.039"
+            />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/TodoItems"
+        android:layout_width="362dp"
+        android:layout_height="525dp"
+        android:tectColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.086" />
+
+    <EditText
+        android:id="@+id/TodoTitle"
+        android:layout_width="214dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="times new roman"
+        android:hint="Enter Todo Title"
+        android:textColorHint="@color/black"
+        android:textSize="12dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDeleteDoneTodos"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDeleteDoneTodos"
+        app:layout_constraintVertical_bias="0.0"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/AddTodo"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:backgroundTint="#372599"
+        android:fontFamily="times new roman"
+        android:text="Add Todo"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/btnDeleteDoneTodos"
+        app:layout_constraintEnd_toStartOf="@+id/btnDeleteDoneTodos"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnDeleteDoneTodos"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnDeleteDoneTodos"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="12dp"
+        android:backgroundTint="#372599"
+        android:fontFamily="times new roman"
+        android:text="Delete done"
+        android:textColor="@color/white"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
